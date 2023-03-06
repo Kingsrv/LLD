@@ -1,0 +1,51 @@
+Problem Statement - Design Tic Ttc Toe
+
+1. ALIGN -
+        - you might know or you might not know the system, the first step is to align yourself to the interviewer.
+        - whatever you know you should tell that to interviewer explicitly.
+2. TYPE OF SYSTEM -
+        - Ask the interviewer, what type of system do they want ? Interactive or persistent ?
+
+3. GATHERING_REQUIREMENTS -
+        - size of the board - n*m
+        - Number of players (n-1) Min 2 players
+        - Each player has their own symbol
+        - each player can choose the symbol at the start of the game.
+        - no two players should have the same symbol
+        - at the beginning of the game we will randomize the players list and move in that order.
+        - winning logic : If any player achieves same marking across row, column or diagonal.
+        - draw logic : if board is full and no winner.
+        - will the game have bots - yes (NOTE : only 1 bot per game)
+        - will bots have difficulty level - yes (EASY, MEDIUM, HARD)
+        - will the game have timer - No (use in CHESS game)
+        - game end condition : game ends when someone won or game is  drawn.
+        - allow people to undo their moves.
+        - bocked cells
+        - re Watch of the game should be available
+
+
+
+4. Class diagram
+    - board
+    - cell
+    - cellState
+    - player
+    - gameState
+    - playerType
+    - Move
+    - Game
+
+5. Design Patterns
+    - we need to validate details for which we need Builder DP
+    - we need to create different objects for which we need factory DP
+    - since there is more than one way to win the game , we need strategy DP.
+
+
+
+6. There are two ways to define packages
+    - Layer driven
+        . Repository, Controller, Service, Models
+    - Domain Driven / Feature wise
+        . ../user/repository
+          ../user/controller
+          ../user/model
